@@ -6,6 +6,67 @@
     <h2 class="links"><a href="index.html">Home    </a><a href="blogentry.html">Blog Entries</a></h2>
     
     <body>
+        <h3>Blog #4</h3>
+            <p>Slide shows a perfect way to show images in a neat and orderly fashion.  In HTML, you can create a slideshow that needs the user input
+                to change the slides with a caption at the bottom of the image.  But, you can also do a slideshow and with some extra JavaScript code, you can
+                have the slideshow automatically flip on a timer.
+
+                There also multiple different styles of slideshows you can have.  You can have different types of buttons that look different.
+                Image credit to robbreport.com, motor1.com, gannett-cdn.com, and images.hgmsites.net <a href="https://www.w3schools.com/w3css/w3css_slideshow.asp">Link to article</a>
+                
+                <style>
+                    .mySlides{
+                        display: none;
+                    }
+                    .animate-top {
+                        position:relative;
+                        animation:animatetop 0.4s
+                    }
+                    @keyframes animatetop{
+                        from{
+                            top:-300px;opacity:0} 
+                            to{top:0;opacity:1
+                        }
+                    }
+                    .animate-bottom{
+                        position:relative;
+                        animation:animatebottom 0.4s
+                    }
+                    @keyframes animatebottom{
+                        from{
+                            bottom:-300px;opacity:0
+                        } 
+                        to{
+                            bottom:0;opacity:1
+                        }
+                    }                  
+                        
+                </style>
+                <div class="content section" style="max-width: 500px;">
+                    <img class="mySlides animate-top" src="2020-chevy-corvette-stingray-feature.jpg" style="width: 100%;">
+                    <img class="mySlides animate-bottom" src="hennesseyc801.jpg" style="width: 100%;">
+                    <img class="mySlides animate-top" src="2020-chevrolet-corvette_100729795_h.jpg" style="width: 100%;">
+                    <img class="mySlides animate-bottom" src="5943c7ea-b794-41b1-8861-4c83ed4aed10-roar_corvette-gray-side.jpg" width="100%">
+                </div>
+                <script>
+                    var myIndex = 0;
+                    carousel();
+
+                    function carousel() {
+                        var i;
+                        var x = document.getElementsByClassName("mySlides");
+                        for(i = 0; i < x.length; i++) {
+                            x[i].style.display = "none";
+                        }
+                        myIndex++;
+                        if(myIndex > x.length) {
+                            myIndex = 1;
+                        }
+                        x[myIndex-1].style.display = "block";
+                        setTimeout(carousel, 2500);
+                    }
+                </script>
+            </p>
         <h3>Blog #3</h3>
         <h4>3/2/20</h4>
             <p>Just like in Java, you can create buttons on your webpage to interact with the user.  These buttons can offer many different
