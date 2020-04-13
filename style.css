@@ -19,3 +19,15 @@
     float: left;
     padding-right: 10px;
 }
+.grumpycat {
+    width: 50vw;
+}
+.grumpycat2 {
+    width: 480px;
+}
+@media(max-width: 1034px) {
+    .grumpycat2 {
+        width: 350px;
+    }
+}
+
