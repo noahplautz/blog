@@ -58,6 +58,7 @@ html, body, .holster {
      scroll-snap-type: none;
 }
 
+
 .container.x {
     width: 100%;
     height: 128px;
